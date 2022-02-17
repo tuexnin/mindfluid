@@ -53,6 +53,21 @@
 <script src="../../public/js/sb-admin-2.min.js"></script>
 <script src="../../public/js/datatables.min.js"></script>
 <script src="../../public/js/bootstrap-select.min.js"></script>
+<script src="../../public/js/bootbox.all.min.js"></script>
+
+<!<!-- scripts del editor -->
+<script src="../../public/dist/jquery-resizable.min.js"></script>
+<script src="../../public/dist/trumbowyg.min.js"></script>
+<script src="../../public/dist/langs/es.min.js"></script>
+<script src="../../public/dist/plugins/emoji/trumbowyg.emoji.min.js"></script>
+
+<script src="../../public/dist/plugins/upload/trumbowyg.upload.min.js"></script>
+
+<script src="../../public/dist/plugins/resizimg/trumbowyg.resizimg.min.js"></script>
+<script src="../../public/dist/plugins/indent/trumbowyg.indent.min.js"></script>
+<script src="../../public/dist/plugins/pasteembed/trumbowyg.pasteembed.min.js"></script>
+<script src="../../public/dist/plugins/noembed/trumbowyg.noembed.min.js"></script>
+
 
 <script src="../pages/scripts/menu.js"></script>
 

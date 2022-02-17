@@ -21,6 +21,10 @@
         <link href="../../public/css/sb-admin-2.min.css" rel="stylesheet">
         <link href="../../public/css/bootstrap-select.min.css" rel="stylesheet">
         <link href="../../public/css/datatables.min.css" rel="stylesheet">
+        
+        <!<!-- styles for the editor -->
+        <link rel="stylesheet" href="../../public/dist/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="../../public/dist/plugins/emoji/ui/trumbowyg.emoji.min.css">
 
     </head>
 
@@ -68,6 +72,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Componentes:</h6>
+                            <a class="collapse-item" href="#" id="btnTipo">Tipo</a>
                             <a class="collapse-item" href="#" id="btnCategoria">Categoria</a>
                             <a class="collapse-item" href="#" id="btnMarcas">Marcas</a>
                             <a class="collapse-item" href="#" id="btnProductos">Productos</a>

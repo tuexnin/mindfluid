@@ -53,10 +53,10 @@
         </div>
         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <label>Estado(*):</label>
-            <select id="estado" name="estado" class="form-control selectpicker"  required>
+            <select id="estado" name="estado" class="form-control "  required>
                 <option selected>Seleccione</option>
-                <option value="Activo">Activo</option>
-                <option value="Inactivo">Inactivo</option>
+                <option value="1">Activo</option>
+                <option value="0">Inactivo</option>
             </select>
         </div>
         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">

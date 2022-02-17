@@ -92,7 +92,7 @@ function guardaryeditar(e)
     var formData = new FormData($("#formulario")[0]);
 
     $.ajax({
-        url: "../ajax/personal.php?op=guardaryeditar",
+        url: "../controller/marcas.php?op=guardaryeditar",
         type: "POST",
         data: formData,
         contentType: false,
@@ -109,38 +109,29 @@ function guardaryeditar(e)
     limpiar();
 }
 
-function mostrar(idpersonal)
+function mostrar(idmarcas)
 {
-    $.post("../ajax/personal.php?op=mostrar", {idpersonal: idpersonal}, function (data, status)
+    $.post("../controller/marcas.php?op=mostrar", {idmarca: idmarcas}, function (data, status)
     {
         data = JSON.parse(data);
         mostrarform(true);
 
-        $("#idpersonal").val(data.id);
-        $("#pri_nombre").val(data.pri_nombre);
-        $("#sec_nombre").val(data.sec_nombre);
-        $("#ap_paterno").val(data.ape_paterno);
-        $("#ap_materno").val(data.ape_materno);
-        $("#dni").val(data.dni);
-        $("#correo").val(data.correo);
-        $("#carrera").val(data.carrera);
-        $("#cargo").val(data.cargo);
-        $("#descripcion").val(data.descripcion);
+        $("#idmarca").val(data.idmarcas);
+        $("#nombre").val(data.nombre);
         $('#estado').val(data.estado)
-        $('#categoria').val(data.categoria);
         $("#imagenmuestra").show();
-        $("#imagenmuestra").attr("src", "../files/muestra/" + data.foto);
-        $("#imagenactual").val(data.foto);
+        $("#imagenmuestra").attr("src", "../files/marcas/" + data.imagen);
+        $("#imagenactual").val(data.imagen);
     })
 }
 
 //Función para desactivar registros
-function desactivar(idpersonal)
+function desactivar(idmarcas)
 {
-    bootbox.confirm("¿Está Seguro de desactivar al personal?", function (result) {
+    bootbox.confirm("¿Está Seguro de desactivar la marca?", function (result) {
         if (result)
         {
-            $.post("../ajax/personal.php?op=desactivar", {idpersonal: idpersonal}, function (e) {
+            $.post("../controller/marcas.php?op=desactivar", {idmarca: idmarcas}, function (e) {
                 bootbox.alert(e);
                 tabla.ajax.reload();
             });
@@ -149,12 +140,12 @@ function desactivar(idpersonal)
 }
 
 //Función para activar registros
-function activar(idpersonal)
+function activar(idmarcas)
 {
-    bootbox.confirm("¿Está Seguro de activar al personal?", function (result) {
+    bootbox.confirm("¿Está Seguro de activar la marca?", function (result) {
         if (result)
         {
-            $.post("../ajax/personal.php?op=activar", {idpersonal: idpersonal}, function (e) {
+            $.post("../controller/marcas.php?op=activar", {idmarca: idmarcas}, function (e) {
                 bootbox.alert(e);
                 tabla.ajax.reload();
             });

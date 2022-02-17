@@ -1,4 +1,7 @@
 $(document).ready(function (){
+    $('#btnTipo').click(function (){
+        $('#contenido').load('tipo.php');
+    });
     $('#btnCategoria').click(function (){
         $('#contenido').load('categoria.php');
     });
@@ -6,6 +9,6 @@ $(document).ready(function (){
         $('#contenido').load('marcas.php');
     });
     $('#btnProductos').click(function (){
-        $('#contenido').load('productos');
+        $('#contenido').load('productos.php');
     });
 })
