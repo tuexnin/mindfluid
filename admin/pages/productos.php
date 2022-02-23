@@ -22,7 +22,6 @@
                         <th>Resumen</th>
                         <th>Pre. lista</th>
                         <th>Pre. venta</th>
-                        <th>Fecha P.</th>
                         <th>Categoria</th>
                         <th>Marca</th>
                     </tr>
@@ -33,7 +32,6 @@
                         <th>Resumen</th>
                         <th>Pre. lista</th>
                         <th>Pre. venta</th>
-                        <th>Fecha P.</th>
                         <th>Categoria</th>
                         <th>Marca</th>
                     </tr>

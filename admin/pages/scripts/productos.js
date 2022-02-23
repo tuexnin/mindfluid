@@ -168,9 +168,15 @@ function mostrar(idproductos)
         data = JSON.parse(data);
         mostrarform(true);
 
-        $("#idcategoria").val(data.idcategoria);
-        $("#nombre").val(data.categoria);
-        $("#tipo").val(data.tipo);
+        $("#idproducto").val(data.idproducto);
+        $("#nombre").val(data.nombre);
+        $("#resumen").val(data.resumen);
+        $("#seo").val(data.descripcionseo);
+        $("#descripcion").val(data.descripcion);
+        $("#plista").val(data.preciolista);
+        $("#pventa").val(data.precioventa);
+        $("#categoria").val(data.categoria);
+        $("#marca").val(data.marca);
     })
 }
 
