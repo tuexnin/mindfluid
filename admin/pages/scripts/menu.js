@@ -11,4 +11,28 @@ $(document).ready(function (){
     $('#btnProductos').click(function (){
         $('#contenido').load('productos.php');
     });
+    
+    $('#btnBlog').click(function (){
+        $('#contenido').load('blog.php');
+    });
+    
+    $('#btnServicios').click(function (){
+        $('#contenido').load('servicios.php');
+    });
+    
+    $('#btnCliente').click(function (){
+        $('#contenido').load('cliente.php');
+    });
+    
+    $('#btnContactenos').click(function (){
+        $('#contenido').load('contacto.php');
+    });
+    
+    $('#btnUsuarios').click(function (){
+        $('#contenido').load('usuarios.php');
+    });
+    
+    $('#btnConfiguracion').click(function (){
+        $('#contenido').load('config.php');
+    });
 })

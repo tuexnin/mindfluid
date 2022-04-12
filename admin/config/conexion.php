@@ -23,11 +23,19 @@ if (mysqli_connect_errno()) {
     exit();
 }
 
+
 if (!function_exists('ejecutarConsulta')) {
+
+    function ultimoid(){
+        global $conexion;
+        $ultimoid = mysqli_insert_id($conexion);
+        return $ultimoid;
+    }
+
 
     function ejecutarConsulta($sql) {
         global $conexion;
-        $query = $conexion->query($sql);
+        $query = $conexion->query($sql) or die(mysql_error());
         return $query;
     }
 

@@ -73,7 +73,7 @@ switch ($_GET["op"]) {
     case 'selectMarca':
         $rspta = $marcas->listar();
         while ($reg = $rspta->fetch_object()){
-            echo "<option value='.$reg->idmarcas.'>$reg->nombre</option>";
+            echo "<option value='$reg->idmarcas'>$reg->nombre</option>";
         }
         
         break;

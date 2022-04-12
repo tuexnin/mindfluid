@@ -18,20 +18,18 @@
             <table class=" display responsive nowrap" id="tbllistado" width="100%" cellspacing="0">
                 <thead>
                     <tr>
+                        <th>Opciones</th>
                         <th>Nombre</th>
                         <th>Resumen</th>
-                        <th>Pre. lista</th>
-                        <th>Pre. venta</th>
                         <th>Categoria</th>
                         <th>Marca</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
+                        <th>Opciones</th>
                         <th>Nombre</th>
                         <th>Resumen</th>
-                        <th>Pre. lista</th>
-                        <th>Pre. venta</th>
                         <th>Categoria</th>
                         <th>Marca</th>
                     </tr>
@@ -60,7 +58,7 @@
         </div>
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <label>Descripcion SEO(*):</label>
-            <textarea class="form-control" id="seo" name="seo" placeholder="SEO" rows="2" maxlength="200" required></textarea>
+            <textarea class="form-control" id="seo" name="seo"  rows="2" maxlength="200" required></textarea>
         </div>
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <label>Contenido(*):</label>
@@ -88,6 +86,30 @@
                 <select class="form-control selectpicker" name="marca" id="marca" data-live-search="true" title="Seleccione" required>
                 </select>
             </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label>Imagen 1:</label>
+                <input type="file" class="form-control" name="imagen1" id="imagen1" required>
+                <input type="hidden" name="imagenactual1" id="imagenactual1">
+                <input type="hidden" name="imagenactualid1" id="imagenactualid1">
+                <img src="" width="150px" height="120px" id="imagenmuestra1">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label>Imagen 2:</label>
+                <input type="file" class="form-control" name="imagen2" id="imagen2" required>
+                <input type="hidden" name="imagenactual2" id="imagenactual2">
+                <input type="hidden" name="imagenactualid2" id="imagenactualid2">
+                <img src="" width="150px" height="120px" id="imagenmuestra2">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label>Imagen 3:</label>
+                <input type="file" class="form-control" name="imagen3" id="imagen3" required>
+                <input type="hidden" name="imagenactual3" id="imagenactual3">
+                <input type="hidden" name="imagenactualid3" id="imagenactualid3">
+                <img src="" width="150px" height="120px" id="imagenmuestra3">
+            </div>
+
         </div>
 
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">

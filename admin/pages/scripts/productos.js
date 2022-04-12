@@ -9,6 +9,10 @@ function init() {
     {
         guardaryeditar(e);
     })
+    
+    $("#imagenmuestra1").hide();
+    $("#imagenmuestra2").hide();
+    $("#imagenmuestra3").hide();
 
     //para el editor
     $('#descripcion').trumbowyg({
@@ -62,6 +66,9 @@ function init() {
         //console.log(data);
         $('#marca').selectpicker('refresh');
     });
+    
+    
+    
 }
 
 //Función limpiar
@@ -76,6 +83,18 @@ function limpiar()
     $("#pventa").val("");
     $("#categoria").val('').trigger('change');
     $("#marca").val('').trigger('change');
+    $("#imagenactual1").val("");
+    $("#imagen1").val("");
+    $("#imagenactual2").val("");
+    $("#imagen2").val("");
+    $("#imagenactual3").val("");
+    $("#imagen3").val("");
+    $("#imagenmuestra1").attr("src", "");
+    $("#imagenmuestra2").attr("src", "");
+    $("#imagenmuestra3").attr("src", "");
+    $("#imagenactualid1").val("");
+    $("#imagenactualid2").val("");
+    $("#imagenactualid3").val("");
 
 }
 
@@ -89,6 +108,9 @@ function mostrarform(flag)
         $("#formularioregistros").show();
         $("#btnGuardar").prop("disabled", false);
         $("#btnagregar").hide();
+        $("#imagenmuestra1").hide();
+        $("#imagenmuestra1").hide();
+        $("#imagenmuestra2").hide();
     } else
     {
         $("#listadoregistros").show();
@@ -161,22 +183,41 @@ function guardaryeditar(e)
     limpiar();
 }
 
-function mostrar(idproductos)
+function mostrar(idproducto)
 {
-    $.post("../controller/productos.php?op=mostrar", {idproductos: idproductos}, function (data, status)
+        
+    $.post("../controller/productos.php?op=mostrar1", {idproducto: idproducto}, function (data, status)
     {
         data = JSON.parse(data);
+        //console.log(data);
         mostrarform(true);
-
         $("#idproducto").val(data.idproducto);
         $("#nombre").val(data.nombre);
         $("#resumen").val(data.resumen);
         $("#seo").val(data.descripcionseo);
-        $("#descripcion").val(data.descripcion);
+        $("#descripcion").trumbowyg();
+        $("#descripcion").trumbowyg('html', data.descripcion);
         $("#plista").val(data.preciolista);
         $("#pventa").val(data.precioventa);
-        $("#categoria").val(data.categoria);
-        $("#marca").val(data.marca);
+        $('#categoria').selectpicker('val', data.categoria);
+        $("#marca").selectpicker('val', data.marca);
+    })
+    $.post("../controller/productos.php?op=mostrar2", {idproducto: idproducto}, function (data, status)
+    {
+        data = JSON.parse(data);
+        //console.log(data);
+        $("#imagenmuestra1").show();
+        $("#imagenmuestra2").show();
+        $("#imagenmuestra3").show();
+        $("#imagenmuestra1").attr("src", "../files/productos/" + data[0].url);
+        $("#imagenactual1").val(data[0].url);
+        $("#imagenactualid1").val(data[0].id);
+        $("#imagenmuestra2").attr("src", "../files/productos/" + data[1].url);
+        $("#imagenactual2").val(data[1].url);
+        $("#imagenactualid2").val(data[1].id);
+        $("#imagenmuestra3").attr("src", "../files/productos/" + data[2].url);
+        $("#imagenactual3").val(data[2].url);
+        $("#imagenactualid3").val(data[2].id);
     })
 }
 

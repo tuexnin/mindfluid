@@ -76,6 +76,10 @@
                             <a class="collapse-item" href="#" id="btnCategoria">Categoria</a>
                             <a class="collapse-item" href="#" id="btnMarcas">Marcas</a>
                             <a class="collapse-item" href="#" id="btnProductos">Productos</a>
+                            <a class="collapse-item" href="#" id="btnBlog">Blog</a>
+                            <a class="collapse-item" href="#" id="btnServicios">Servicios</a>
+                            <a class="collapse-item" href="#" id="btnCliente">Cliente</a>
+                            <a class="collapse-item" href="#" id="btnContactenos">Contactenos</a>
                         </div>
                     </div>
                 </li>
@@ -91,10 +95,8 @@
                          data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Utilities:</h6>
-                            <a class="collapse-item" href="utilities-color.html">Colors</a>
-                            <a class="collapse-item" href="utilities-border.html">Borders</a>
-                            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                            <a class="collapse-item" href="utilities-other.html">Other</a>
+                            <a class="collapse-item" href="#" id="btnUsuarios">Usuarios</a>
+                            <a class="collapse-item" href="#" id="btnConfiguracion">Config</a>
                         </div>
                     </div>
                 </li>
