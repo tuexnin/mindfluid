@@ -20,16 +20,18 @@
                     <tr>
                         <th>Opciones</th>
                         <th>ID</th>
-                        <th>Contenido</th>
+                        <th>Titulo</th>
                         <th>Fecha P.</th>
+                        <th>Estado</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
                         <th>Opciones</th>
                         <th>ID</th>
-                        <th>Contenido</th>
+                        <th>Titulo</th>
                         <th>Fecha P.</th>
+                        <th>Estado</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -46,8 +48,23 @@
         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <label>Titulo(*):</label>
             <input type="hidden" name="idblog" id="idblog">
+            <input type="hidden" name="tipopublicacion" id="tipopublicacion" value="blog">
             <input type="text" class="form-control" name="titulo" 
                    id="titulo" maxlength="100" required>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label>Portada(*):</label>
+                <input type="file" class="form-control" name="portada" id="portada">
+                <input type="hidden" name="imagenactual" id="imagenactual">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img src="" width="250px" height="120px" id="imagenmuestra">
+            </div>
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <label>Descripcion(*):</label>
+            <textarea class="form-control" id="descripcion" rows="2" name="descripcion" maxlength="200" required></textarea>
         </div>
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <label>Contenido(*):</label>

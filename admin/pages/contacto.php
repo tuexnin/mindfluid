@@ -15,15 +15,17 @@
                 <thead>
                     <tr>
                         <th>Opciones</th>
-                        <th>Nombre</th>
                         <th>Asunto</th>
+                        <th>Cliente</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
                         <th>Opciones</th>
-                        <th>Nombre</th>
                         <th>Asunto</th>
+                        <th>Cliente</th>
+                        <th>Email</th>
                     </tr>
                 </tfoot>
                 <tbody>
@@ -34,28 +36,44 @@
     </div>
 </div>
 
-<!-- inicio del formulario -->
-<div class="panel-body" id="vistacorreo">
-        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <label>Cliente:</label>
-            <input type="hidden" name="idcontactenos" id="idcontactenos">
-            <input type="text" class="form-control" name="nombre" 
-                   id="Nombre" maxlength="100">
-        </div>
+<div class="card shadow mb-4" id="vistacorreo">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Mensaje</h6>
+    </div>
+    <div class="panel-body" id="">
         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <label>Asunto:</label>
             <input type="text" class="form-control" name="asunto" 
-                   id="asunto" maxlength="100">
+                   id="asunto" readonly>
+        </div>    
+        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <label>Cliente:</label>
+            <input type="hidden" name="idcontactenos" id="idcontactenos">
+            <input type="text" class="form-control" name="persona" 
+                   id="persona" readonly>
         </div>
+
         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <label>Correo:</label>
             <input type="text" class="form-control" name="email" 
-                   id="email" maxlength="100">
+                   id="email" readonly>
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <label>Telefono:</label>
+            <input type="text" class="form-control" name="telefono" 
+                   id="telefono" readonly>
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <label>Producto:</label>
+            <input type="text" class="form-control" name="producto" 
+                   id="producto" readonly>
         </div>
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <label>Mensaje:</label>
-            <div id="contenido"></div>
+            <div>
+                <p id="mensaje"></p>
+            </div>
         </div>
+    </div>
 </div>
-
 <script src="scripts/contacto.js"></script>

@@ -90,21 +90,21 @@
         <div class="row">
             <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <label>Imagen 1:</label>
-                <input type="file" class="form-control" name="imagen1" id="imagen1" required>
+                <input type="file" class="form-control" name="imagen1" id="imagen1" >
                 <input type="hidden" name="imagenactual1" id="imagenactual1">
                 <input type="hidden" name="imagenactualid1" id="imagenactualid1">
                 <img src="" width="150px" height="120px" id="imagenmuestra1">
             </div>
             <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <label>Imagen 2:</label>
-                <input type="file" class="form-control" name="imagen2" id="imagen2" required>
+                <input type="file" class="form-control" name="imagen2" id="imagen2" >
                 <input type="hidden" name="imagenactual2" id="imagenactual2">
                 <input type="hidden" name="imagenactualid2" id="imagenactualid2">
                 <img src="" width="150px" height="120px" id="imagenmuestra2">
             </div>
             <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <label>Imagen 3:</label>
-                <input type="file" class="form-control" name="imagen3" id="imagen3" required>
+                <input type="file" class="form-control" name="imagen3" id="imagen3" >
                 <input type="hidden" name="imagenactual3" id="imagenactual3">
                 <input type="hidden" name="imagenactualid3" id="imagenactualid3">
                 <img src="" width="150px" height="120px" id="imagenmuestra3">
