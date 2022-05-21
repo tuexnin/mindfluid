@@ -1,3 +1,18 @@
+<!-- ##### CTA Area Start ##### -->
+    <div class="call-to-action-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+                        <h3>Do you want to enrole at our Academy? Get in touch!</h3>
+                        <a href="#" class="btn academy-btn">See More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### CTA Area End ##### -->
+
 <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
         <div class="main-footer-area section-padding-100-0">
@@ -97,6 +112,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script src="../public/js/bootbox.all.min.js"></script>
 </body>
 
 </html>

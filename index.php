@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </head>
     <body>
         <?php
-        header("Location:prin/index.html");
+        header("Location: prin/home.php");
         ?>
     </body>
 </html>

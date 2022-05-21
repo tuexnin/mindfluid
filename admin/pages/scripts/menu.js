@@ -16,6 +16,10 @@ $(document).ready(function (){
         $('#contenido').load('blog.php');
     });
     
+    $('#btnSoluciones').click(function (){
+        $('#contenido').load('soluciones.php');
+    });
+    
     $('#btnServicios').click(function (){
         $('#contenido').load('servicios.php');
     });

@@ -76,6 +76,7 @@
                             <a class="collapse-item" href="#" id="btnCategoria">Categoria</a>
                             <a class="collapse-item" href="#" id="btnMarcas">Marcas</a>
                             <a class="collapse-item" href="#" id="btnProductos">Productos</a>
+                            <a class="collapse-item" href="#" id="btnSoluciones">Soluciones</a>
                             <a class="collapse-item" href="#" id="btnBlog">Blog</a>
                             <a class="collapse-item" href="#" id="btnServicios">Servicios</a>
                             <a class="collapse-item" href="#" id="btnCliente">Cliente</a>

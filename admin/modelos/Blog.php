@@ -14,25 +14,35 @@ class Blog {
     }
 
 
-    public function insertar($titulo, $contenido) {
-        $sql = "INSERT INTO blog (titulo, contenido, fecpublicacion)
-		VALUES ('$titulo','$contenido',CURDATE())";
+    public function insertar($tipo, $imagen, $titulo, $seo, $contenido) {
+        $sql = "INSERT INTO contenido (tipo, portada, titulo, seo,contenido, fecpublicacion)
+		VALUES ('$tipo', '$imagen','$titulo', '$seo','$contenido',CURDATE())";
         return ejecutarConsulta($sql);
     }
 
-    public function editar($idblog, $titulo, $contenido) {
-        $sql = "UPDATE blog SET titulo='$titulo', contenido='$contenido' WHERE idblog='$idblog'";
+    public function editar($idblog, $tipo, $imagen, $titulo, $seo, $contenido) {
+        $sql = "UPDATE contenido SET tipo='$tipo', portada='$imagen',titulo='$titulo', seo='$seo',contenido='$contenido' WHERE idblog='$idblog'";
         return ejecutarConsulta($sql);
     }
 
+    public function activar($idblog) {
+        $sql = "UPDATE contenido SET estado='0' WHERE idblog='$idblog'";
+        return ejecutarConsulta($sql);
+    }
+    
+    public function desactivar($idblog) {
+        $sql = "UPDATE contenido SET estado='1' WHERE idblog='$idblog'";
+        return ejecutarConsulta($sql);
+    }
+    
     //Implementar un método para mostrar los datos de un registro a modificar
     public function mostrar($idblog) {
-        $sql = "SELECT * FROM blog WHERE idblog='$idblog'";
+        $sql = "SELECT * FROM contenido WHERE idblog='$idblog'";
         return ejecutarConsultaSimpleFila($sql);
     }
 
     public function listar() {
-        $sql = "SELECT * FROM blog";
+        $sql = "SELECT * FROM contenido WHERE tipo='blog'";
         return ejecutarConsulta($sql);
     }
 

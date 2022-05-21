@@ -3,7 +3,7 @@
 require '../config/conexion.php';
 
 /**
- * Description of Servicios
+ * Description of Blog
  *
  * @author EdwinCR
  */
@@ -13,25 +13,36 @@ class Servicios {
         
     }
 
-    public function insertar($titulo, $contenido) {
-        $sql = "INSERT INTO servicios (nombre, contenido)
-		VALUES ('$titulo','$contenido')";
+
+    public function insertar($tipo, $imagen, $titulo, $seo, $contenido) {
+        $sql = "INSERT INTO contenido (tipo, portada, titulo, seo,contenido, fecpublicacion)
+		VALUES ('$tipo', '$imagen','$titulo', '$seo','$contenido',CURDATE())";
         return ejecutarConsulta($sql);
     }
 
-    public function editar($idservicios, $titulo, $contenido) {
-        $sql = "UPDATE servicios SET nombre='$titulo', contenido='$contenido' WHERE idservicios='$idservicios'";
+    public function editar($idblog, $tipo, $imagen, $titulo, $seo, $contenido) {
+        $sql = "UPDATE contenido SET tipo='$tipo', portada='$imagen',titulo='$titulo', seo='$seo',contenido='$contenido' WHERE idblog='$idblog'";
         return ejecutarConsulta($sql);
     }
 
+    public function activar($idblog) {
+        $sql = "UPDATE contenido SET estado='0' WHERE idblog='$idblog'";
+        return ejecutarConsulta($sql);
+    }
+    
+    public function desactivar($idblog) {
+        $sql = "UPDATE contenido SET estado='1' WHERE idblog='$idblog'";
+        return ejecutarConsulta($sql);
+    }
+    
     //Implementar un método para mostrar los datos de un registro a modificar
-    public function mostrar($idservicios) {
-        $sql = "SELECT * FROM servicios WHERE idservicios='$idservicios'";
+    public function mostrar($idblog) {
+        $sql = "SELECT * FROM contenido WHERE idblog='$idblog'";
         return ejecutarConsultaSimpleFila($sql);
     }
 
     public function listar() {
-        $sql = "SELECT * FROM servicios";
+        $sql = "SELECT * FROM contenido WHERE tipo='servicio'";
         return ejecutarConsulta($sql);
     }
 

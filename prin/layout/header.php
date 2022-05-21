@@ -73,32 +73,26 @@ require 'controller/home.php';
                                 <!-- Nav Start -->
                                 <div class="classynav">
                                     <ul>
-                                        <li><a href="#">Inicio</a></li>
-                                        <li><a href="#">Productos</a>
+                                        <li><a href="home.php">Inicio</a></li>
+                                        <li><a href="productos.php">Productos</a>
                                             <ul class="dropdown">
                                                 <?php
-                                                if (mysqli_num_rows($respueta) > 0) {
-                                                    while ($fila = mysqli_fetch_assoc($respueta)) {
-                                                        echo "<li><a href='redirect.php?op=" . $fila['idtipo'] . "'>" . $fila['nombre'] . "</a></li>";
-                                                    }
-                                                }
-                                                ?>
+//                                                if (mysqli_num_rows($respueta) > 0) {
+//                                                    while ($fila = mysqli_fetch_assoc($respueta)) {
+//                                                        echo "<li><a href='redirect.php?op=" . $fila['idtipo'] . "'>" . $fila['nombre'] . "</a></li>";
+//                                                    }
+//                                                }
+//                                                ?>
+                                                <li><a href="productos.php">BOMBAS</a></li>
+                                                <li><a href="productos.php">SOPLADORES</a></li>
+                                                <li><a href="productos.php">REPUESTOS</a></li>
+                                                <li><a href="productos.php">OTROS</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Servicios</a>
-                                                <ul class="dropdown">
-                                                    <?php
-                                                    if (mysqli_num_rows($respueta2) > 0) {
-                                                        while ($fila = mysqli_fetch_assoc($respueta2)) {
-                                                            echo "<li><a href='redirect.php?op=" . $fila['idservicios'] . "'>" . $fila['nombre'] . "</a></li>";
-                                                        }
-                                                    }
-                                                    ?>
-                                                </ul>
-                                        </li>
-                                        <li><a href="about-us.html">Soluciones</a></li>
-                                        <li><a href="course.html">Blog</a></li>
-                                        <li><a href="contact.html">Contactenos</a></li>
+                                        <li><a href="servicios.php">Servicios</a></li>
+                                        <li><a href="soluciones.php">Soluciones</a></li>
+                                        <li><a href="blog.php">Blog</a></li>
+                                        <li><a href="contacto.php">Contactenos</a></li>
                                     </ul>
                                 </div>
                                 <!-- Nav End -->
@@ -108,6 +102,7 @@ require 'controller/home.php';
                             <div class="calling-info">
                                 <div class="call-center">
                                     <a href="tel:+51930324980"><i class="icon-telephone-2"></i> <span>(+51) 930324980</span></a>
+                                    <a href="#"><i class="icon-email"></i> <span>info@minfluid.com</span></a>
                                 </div>
                             </div>
                         </nav>

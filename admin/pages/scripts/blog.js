@@ -56,6 +56,10 @@ function limpiar()
 {
     $("#idblog").val("");
     $("#titulo").val("");
+    //$("#tipopublicacion").val("");
+    $("#descripcion").val("");
+    $("#imagenactual").val("");
+    $("#portada").val("");
     $("#cont").trumbowyg('empty');
 }
 
@@ -74,7 +78,7 @@ function mostrarform(flag)
         $("#listadoregistros").show();
         $("#formularioregistros").hide();
         $("#btnagregar").show();
-
+        $("#imagenmuestra").hide();
     }
 }
 
@@ -122,7 +126,6 @@ function guardaryeditar(e)
     e.preventDefault(); //No se activará la acción predeterminada del evento
     $("#btnGuardar").prop("disabled", true);
     var formData = new FormData($("#formulario")[0]);
-
     $.ajax({
         url: "../controller/blog.php?op=guardaryeditar",
         type: "POST",
@@ -150,10 +153,44 @@ function mostrar(idblog)
         //console.log(data);
         mostrarform(true);
         $("#idblog").val(data.idblog);
+        $("#tipopublicacion").val(data.tipo);
         $("#titulo").val(data.titulo);
+        $("#descripcion").val(data.seo);
+        $("#imagenmuestra").show();
+        $("#imagenmuestra").attr("src", "../files/contenido/" + data.portada);
+        $("#imagenactual").val(data.portada);
         $("#cont").trumbowyg('html', data.contenido);
     });
 
+}
+
+
+//Función para desactivar registros
+function desactivar(idblog)
+{
+    bootbox.confirm("¿Está Seguro de desactivar el Contenido?", function (result) {
+        if (result)
+        {
+            $.post("../controller/blog.php?op=desactivar", {idblog: idblog}, function (e) {
+                bootbox.alert(e);
+                tabla.ajax.reload();
+            });
+        }
+    })
+}
+
+//Función para activar registros
+function activar(idblog)
+{
+    bootbox.confirm("¿Está Seguro de activar el Contenido?", function (result) {
+        if (result)
+        {
+            $.post("../controller/blog.php?op=activar", {idblog: idblog}, function (e) {
+                bootbox.alert(e);
+                tabla.ajax.reload();
+            });
+        }
+    })
 }
 
 

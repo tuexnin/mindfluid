@@ -252,20 +252,7 @@ require './layout/header.php';
 </div>
 <!-- ##### Partner Area End ##### -->
 
-<!-- ##### CTA Area Start ##### -->
-<div class="call-to-action-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                    <h3>Quieres ser parte de nuestra familia? Dale click!</h3>
-                    <a href="#" class="btn academy-btn">Contactanos</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ##### CTA Area End ##### -->
+
 
 <?php
 require './layout/footer.php';
