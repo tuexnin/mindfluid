@@ -11,7 +11,7 @@ require './layout/header.php';
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
-                        <div class="hero-slides-content">
+                        <div class="hero-slides-content ml-50">
                             <h4 data-animation="fadeInUp" data-delay="100ms">Todos los productos que tu nececites</h4>
                             <h2 data-animation="fadeInUp" data-delay="400ms">bienvenido a <br>MindFluid</h2>
                             <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Ver Mas</a>
@@ -26,7 +26,7 @@ require './layout/header.php';
             <div class="container h-100">
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
-                        <div class="hero-slides-content">
+                        <div class="hero-slides-content ml-50">
                             <h4 data-animation="fadeInUp" data-delay="100ms">Todos los productos que tu nececites</h4>
                             <h2 data-animation="fadeInUp" data-delay="400ms">bienvenido a <br>MindFluid</h2>
                             <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Ver Mas</a>

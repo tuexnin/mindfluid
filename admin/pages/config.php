@@ -84,6 +84,17 @@
                         <div class="input-group-text"><i class="fas fa-info-circle"></i></div>
                     </div>
                     <input type="file" class="form-control" id="catalogo" name="catalogo">
+                    
+                </div>
+                <input type="text" class="form-control" id="catalogoActual" name="catalogoActual" readonly>
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <label>Mapa(*):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"><i class="fas fa-info-circle"></i></div>
+                    </div>
+                    <input type="text" class="form-control" id="mapa" name="mapa" placeholder="https://www.google.com/maps/embed?">
                 </div>
             </div>
 
@@ -93,3 +104,5 @@
         </form>
     </div>
 </div>
+
+<script src="scripts/config.js"></script>

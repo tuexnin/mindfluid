@@ -98,6 +98,7 @@
                             <h6 class="collapse-header">Custom Utilities:</h6>
                             <a class="collapse-item" href="#" id="btnUsuarios">Usuarios</a>
                             <a class="collapse-item" href="#" id="btnConfiguracion">Config</a>
+                            <a class="collapse-item" href="#" id="btnSlider">Slider</a>
                         </div>
                     </div>
                 </li>

@@ -39,4 +39,8 @@ $(document).ready(function (){
     $('#btnConfiguracion').click(function (){
         $('#contenido').load('config.php');
     });
+    
+    $('#btnSlider').click(function (){
+        $('#contenido').load('slider.php');
+    });
 })
